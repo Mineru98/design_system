@@ -1,10 +1,10 @@
 {
-	"trailingComma": "all",
-    "parser": "typescript",
-	"useTabs": true,
+	"printWidth": 160,
 	"tabWidth": 2,
+	"useTabs": true,
 	"semi": true,
 	"singleQuote": false,
-	"jsxSingleQuote": false,
-	"printWidth": 160
+	"trailingComma": "all",
+    "parser": "typescript",
+	"jsxSingleQuote": false
 }

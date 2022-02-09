@@ -1,3 +1,15 @@
 {
-    "plugins": ["@emotion"]
+    "plugins": ["@emotion", "@babel/plugin-proposal-optional-chaining"],
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "targets": "> 0.25%, not dead",
+                "useBuiltIns": "usage",
+                "corejs": "3.6.4",
+                "shippedProposals": true,
+                "modules": false
+            }
+        ]
+    ]
 }

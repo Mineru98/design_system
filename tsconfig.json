@@ -23,6 +23,8 @@
         },
         /* 타입 정의를 포함할 폴더 목록, 설정 안 할 시 기본적으로 ./node_modules/@types로 설정 */
         "typeRoots": ["./src/types", "./node_modules/@types"],
+        /*  */
+        "types": ["react", "@emotion/react/types/css-prop"],
         /* 모든 imports에 대한 namespace 생성을 통해 CommonJS와 ES Modules 간의 상호 운용성이 생기게할 지 여부, 'allowSyntheticDefaultImports'를 암시적으로 승인합니다. */
         "esModuleInterop": true,
         /* 분리된 파일을 가지고 있는 대신, 단일 파일을 소스 맵과 가지고 있을 지 여부 */

@@ -1,18 +1,43 @@
 import React from "react";
+import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 
-import { Header } from "./Header";
+import Header from "./Header";
 
 export default {
-	title: "Example/Header",
+	title: "modulers/Header",
 	component: Header,
+	parameters: {
+		viewport: {
+			viewports: INITIAL_VIEWPORTS,
+			defaultViewport: "iphone6",
+		},
+	},
 };
 
-const Template = (args) => <Header {...args} />;
-
-export const LoggedIn = Template.bind({});
-LoggedIn.args = {
-	user: {},
+export const LoggedIn = () => {
+	return <Header user={{}} onLogin={() => {}} onLogout={() => {}} onCreateAccount={() => {}} />;
 };
 
-export const LoggedOut = Template.bind({});
-LoggedOut.args = {};
+LoggedIn.parameters = {
+	viewport: {
+		defaultViewport: "iphonex",
+	},
+};
+
+LoggedIn.story = {
+	name: "LogIn",
+};
+
+export const LoggedOut = () => {
+	return <Header onLogin={() => {}} onLogout={() => {}} onCreateAccount={() => {}} />;
+};
+
+LoggedOut.parameters = {
+	viewport: {
+		defaultViewport: "iphonex",
+	},
+};
+
+LoggedOut.story = {
+	name: "LogOut",
+};

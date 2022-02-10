@@ -17,8 +17,15 @@ module.exports = {
 		rules: [
 			{
 				test: /\.(ts|tsx|js|jsx)$/,
-				loader: "babel-loader",
 				exclude: /node_modules/,
+				use: [
+					{
+						loader: "babel-loader",
+						options: {
+							presets: ["@babel/preset-env", "@babel/preset-react", "@babel/preset-typescript"],
+						},
+					},
+				],
 			},
 			{
 				test: /\.(png|jpe?g|gif|woff|woff2|ttf|svg|ico)$/i,

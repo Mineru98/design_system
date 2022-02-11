@@ -12,28 +12,39 @@ export default {
 	parameters: {
 		viewport: {
 			viewports: INITIAL_VIEWPORTS,
-			defaultViewport: "iphone6",
 		},
 	},
 };
 
 export const BaseButton = () => {
-	const label = text("children", "BUTTON");
+	const label = text("label", "BUTTON");
 	const size = select("size", ["tiny", "small", "medium", "large", "huge"], "medium");
 	const theme = select("theme", ["primary", "secondary", "tertiary"], "primary");
+	const radius = select("radius", [1, 2, 3, 4, 5, 6], 1);
 	const disabled = boolean("disabled", false);
-	const circle = boolean("circle", false);
 	const load = boolean("load", false);
+	const none = boolean("none", false);
+	const labelBold = boolean("labelBold", false);
 
-	return <Button size={size} theme={theme} disabled={disabled} onClick={action("onClick")} circle={circle} load={load} label={label} />;
+	return (
+		<Button
+			size={size}
+			theme={theme}
+			disabled={disabled}
+			radius={radius}
+			onClick={action("onClick")}
+			load={load}
+			none={none}
+			label={label}
+			labelBold={labelBold}
+		/>
+	);
 };
 
 BaseButton.parameters = {
-	viewport: {
-		defaultViewport: "iphonex",
-	},
+	viewport: {},
 };
 
 BaseButton.story = {
-	name: "Default",
+	name: "BaseButton",
 };

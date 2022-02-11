@@ -2,25 +2,29 @@ export interface Palette {
 	hover: string;
 	main: string;
 	active: string;
+	transparent: string;
 	contrastText: string;
 	disable: string;
+	disableText: string;
+}
+
+export interface Typography {
+	fontFamily: string;
+	fontColor: string;
+	fontSize: number | string;
+	fontWeightLight: number;
+	fontWeightRegular: number;
+	fontWeightMedium: number;
 }
 
 export interface Theme {
 	bgColor: string;
-	fontColor: string;
 	palette: {
 		primary: Palette;
 		secondary: Palette;
 		tertiary: Palette;
 	};
-	typography: {
-		fontFamily: string;
-		fontSize: number | string;
-		fontWeightLight: number;
-		fontWeightRegular: number;
-		fontWeightMedium: number;
-	};
+	typography: Typography;
 }
 
 /**
@@ -29,32 +33,38 @@ export interface Theme {
 
 export const light: Theme = {
 	bgColor: "#fff",
-	fontColor: "#000",
 	palette: {
 		primary: {
-			hover: "rgba(144, 130, 119, 1)",
-			main: "#776b61",
-			active: "rgba(144, 130, 119, 0.56)",
+			main: "rgba(23, 128, 195, 1)",
+			hover: "rgba(23, 128, 195, 0.78)",
+			active: "rgba(23, 128, 195, 0.56)",
+			transparent: "rgb(75, 151, 199)",
 			contrastText: "#ffffff",
-			disable: "#ada59e",
+			disable: "rgb(167, 167, 167)",
+			disableText: "white",
 		},
 		secondary: {
-			hover: "#f00",
-			main: "#0f0",
-			active: "#00f",
+			main: "rgba(243, 156, 15, 1)",
+			hover: "rgba(243, 156, 15, 0.78)",
+			active: "rgba(243, 156, 15, 0.56)",
+			transparent: "rgb(241, 197, 126)",
 			contrastText: "#fff",
-			disable: "gray",
+			disable: "rgb(167, 167, 167)",
+			disableText: "white",
 		},
 		tertiary: {
-			hover: "#f00",
-			main: "#0f0",
-			active: "#00f",
+			main: "rgba(80, 183, 43, 1)",
+			hover: "rgba(80, 183, 43, 0.78)",
+			active: "rgba(80, 183, 43, 0.56)",
+			transparent: "rgb(144, 213, 117)",
 			contrastText: "#fff",
-			disable: "gray",
+			disable: "rgb(167, 167, 167)",
+			disableText: "white",
 		},
 	},
 	typography: {
 		fontFamily: "'Work Sans', sans-serif",
+		fontColor: "black",
 		fontSize: 14,
 		fontWeightLight: 300,
 		fontWeightRegular: 400,
@@ -68,32 +78,38 @@ export const light: Theme = {
 
 export const dark: Theme = {
 	bgColor: "#000",
-	fontColor: "#eee",
 	palette: {
 		primary: {
-			hover: "#f00",
-			main: "#0f0",
-			active: "#00f",
-			contrastText: "#fff",
-			disable: "gray",
+			main: "rgba(23, 128, 195, 1)",
+			hover: "rgba(23, 128, 195, 0.78)",
+			active: "rgba(23, 128, 195, 0.56)",
+			transparent: "rgb(105, 166, 205)",
+			contrastText: "#ffffff",
+			disable: "rgb(167, 167, 167)",
+			disableText: "white",
 		},
 		secondary: {
-			hover: "#f00",
-			main: "#0f0",
-			active: "#00f",
+			main: "rgba(243, 156, 15, 1)",
+			hover: "rgba(243, 156, 15, 0.78)",
+			active: "rgba(243, 156, 15, 0.56)",
+			transparent: "rgb(241, 197, 126)",
 			contrastText: "#fff",
-			disable: "gray",
+			disable: "rgb(167, 167, 167)",
+			disableText: "white",
 		},
 		tertiary: {
-			hover: "#f00",
-			main: "#0f0",
-			active: "#00f",
+			main: "rgba(80, 183, 43, 1)",
+			hover: "rgba(80, 183, 43, 0.78)",
+			active: "rgba(80, 183, 43, 0.56)",
+			transparent: "rgb(144, 213, 117)",
 			contrastText: "#fff",
-			disable: "gray",
+			disable: "rgb(167, 167, 167)",
+			disableText: "white",
 		},
 	},
 	typography: {
 		fontFamily: "'Work Sans', sans-serif",
+		fontColor: "#eee",
 		fontSize: 14,
 		fontWeightLight: 300,
 		fontWeightRegular: 400,

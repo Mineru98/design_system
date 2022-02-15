@@ -9,7 +9,7 @@ interface Base extends Common {}
 
 interface BaseWrapper extends Common {}
 
-const BaseWrapper = styled.a``;
+const BaseWrapper = styled.div``;
 
 const Base = ({}: Base) => {
 	return <BaseWrapper />;

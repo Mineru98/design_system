@@ -5,7 +5,7 @@ import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 import Typography from ".";
 
 export default {
-	title: "atoms/Typography",
+	title: "atoms/general/Typography",
 	component: Typography,
 	decorators: [withKnobs],
 	parameters: {

@@ -6,7 +6,7 @@ import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 import Button from ".";
 
 export default {
-	title: "atoms/Button",
+	title: "atoms/general/Button",
 	component: Button,
 	decorators: [withKnobs],
 	parameters: {

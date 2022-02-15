@@ -5,7 +5,7 @@ import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 import Input from ".";
 
 export default {
-	title: "atoms/Input",
+	title: "atoms/Data Entry/Input",
 	component: Input,
 	decorators: [withKnobs],
 	parameters: {

@@ -251,6 +251,7 @@ Button.defaultProps = {
 	none: false,
 	radius: 1,
 	labelBold: false,
+	clearIcon: false,
 	onClick: () => {},
 };
 
